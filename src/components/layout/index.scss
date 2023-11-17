@@ -1,15 +1,23 @@
 @import "../../App.scss";
 
 .layout{
-  min-height: 100vh; 
+    height: 100vh;
 }
 .layout-content{
     // background-color: cadetblue;
     width: 100%;
     overflow: hidden;
-    height: calc(100vh - 94px);
-
+    height: 100vh
 }
+.b-banner{
+    color: #FFF;
+    padding: 20px 39px 20px 43px;
+    background-color: $blue;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 .sidebar{
   width: 302px;
   padding: 20px 16px 16px 16px;
