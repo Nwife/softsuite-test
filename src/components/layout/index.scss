@@ -1,0 +1,46 @@
+@import "../../App.scss";
+
+.layout{
+  min-height: 100vh; 
+}
+.layout-content{
+    background-color: cadetblue;
+    width: 100%;
+    overflow: hidden;
+}
+.sidebar{
+  width: 302px;
+  padding: 16px;
+  height: 100vh;
+  flex-shrink: 0;
+  max-height: 100vh;
+}
+.sidebar__item-1{
+    gap: 16px;
+    margin: 24px 0 40px 0;
+    color: $blue;
+}
+.sidebar__item-1-content p:first-child{
+    margin-bottom: 4px;
+}
+.sidebar__item-1-content p:nth-child(2){
+    font-weight: 600;
+}
+.sidebar__item-1-caret{
+    margin-left: 16px;
+}
+.sidebar__section-1{
+    border-bottom: 1px solid rgba(149, 159, 183, 0.2);
+    padding-bottom: 40px;
+}
+.sidebar__section-2{
+    padding-top: 40px;
+}
+.content{
+    gap: 16px;
+}
+.sidebar__item-2 {
+    gap: 24px;
+    color: $blue;
+    font-weight: 500;
+}

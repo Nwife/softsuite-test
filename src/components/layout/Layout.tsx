@@ -8,9 +8,9 @@ import "./index.scss";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div>
+    <div className="layout flex">
       <Sidebar />
-      <div>
+      <div className="layout-content">
         <Topnav />
         {children}
       </div>
