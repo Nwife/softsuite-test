@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 //components
-import Dashbaord from "../pages/dashboard/Dashbaord";
+import Dashbaord from "../pages/dashboard/Dashboard";
 
 const Router = () => {
   return (
