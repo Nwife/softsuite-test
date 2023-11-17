@@ -1,10 +1,11 @@
 //icons
-import switchIcon from "../../assets/icons/switch.svg";
-import employee from "../../assets/icons/employee.svg";
+
 import salary from "../../assets/icons/salary.svg";
-import account from "../../assets/icons/account.svg";
 import logout from "../../assets/icons/logout.svg";
 import payroll from "../../assets/icons/payroll.svg";
+import account from "../../assets/icons/account.svg";
+import switchIcon from "../../assets/icons/switch.svg";
+import employee from "../../assets/icons/employee.svg";
 import dashIcon from "../../assets/icons/dashboard.svg";
 import caretDown from "../../assets/icons/caret-down.svg";
 
