@@ -8,20 +8,23 @@ import "./index.scss";
 
 interface Props {
   style?: object;
+  inputStyle?: object;
   placeholder?: string;
 }
 
 const InputSearch: FC<Props> = (props): JSX.Element => {
   const {
     style = {},
-    placeholder
+    placeholder,
+    inputStyle
   } = props;
 
   return (
-    <div className="flex items-center top-bar__input">
+    <div className="flex items-center top-bar__input" style={{ ...inputStyle }}>
       <input
           type="text"
           placeholder={placeholder}
+          style={{ ...inputStyle }}
       />
       <button style={{ ...style }}><img src={search} alt="" /></button>
     </div>

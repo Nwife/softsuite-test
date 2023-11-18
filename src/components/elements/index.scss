@@ -3,3 +3,32 @@
 .noelement{
     gap: 24px
 }
+.createelement-modal{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    background: rgba(36, 36, 36, 0.20);
+    z-index: 10;
+
+    .createelement-modal__content{
+        width: 795px;
+        padding: 24px 40px;
+        border-radius: 8px;
+        background-color: white;
+        height: 760px; 
+        max-height: calc(100vh - 50px);
+
+        h2{
+            color: $blue;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        .createelement-modal__content-step{
+            margin: 40px 0;
+        }
+    }
+}
