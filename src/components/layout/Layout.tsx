@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 import Sidebar from "../partials/Sidebar";
 import Topnav from "../partials/Topnav";
 import BottomBanner from "../partials/BottomBanner";
+import Breadcrumb from "../Breadcrumb";
 
 //styles
 import "./index.scss";
@@ -17,7 +18,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
             <Sidebar />
             <div className="layout-content">
                 <Topnav />
-                {children}
+                <div className="layout-content__display">
+                  <Breadcrumb />
+                  {children}
+                </div>
             </div>
         </div>
         <BottomBanner />
