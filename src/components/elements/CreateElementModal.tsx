@@ -4,6 +4,7 @@ import { useState } from "react";
 //components
 import ElementsDetails from "./ElementsDetails";
 import AdditionalDetails from "./AdditionalDetails";
+import CustomInput from "../inputTexts/CustomInput";
 
 
 const CreateElementModal = () => {

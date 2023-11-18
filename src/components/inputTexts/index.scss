@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 .top-bar__input{
     width: 354px;
     // padding: 19px 0 19px 23px;
@@ -22,4 +24,31 @@
     // padding: 14px 15px 14px 15px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+.custom-input, .custom-select, .custom-textarea{
+    margin-bottom: 12px;
+
+    label{
+        font-size: 14px;
+        color: #818DA9;
+        display: block;
+        margin-bottom: 8px;
+    }
+    input, textarea{
+        width: 100%;
+        color: $blue;
+        padding: 16px;
+        font-weight: 400;
+        border: 1px solid #E5E5E5;
+        border-radius: 4px;
+    }
+    input:focus, textarea:focus{
+        border-color: $green;
+        outline: none ;
+    }
+    
+    .relative{
+        position: relative;
+    }
 }

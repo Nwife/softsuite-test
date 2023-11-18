@@ -3,6 +3,7 @@
 .noelement{
     gap: 24px
 }
+
 .createelement-modal{
     height: 100%;
     position: fixed;
@@ -31,4 +32,13 @@
             margin: 40px 0;
         }
     }
+}
+
+.element-details__content-one{
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.element-details__content-two{
+    margin-top: 24px;
 }

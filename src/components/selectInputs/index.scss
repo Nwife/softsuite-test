@@ -1,0 +1,42 @@
+@import "../../App.scss";
+@import "../../components/inputTexts/index.scss";
+
+.default-select__value-container {
+    font-size: 14px !important;
+    /* padding: 15.2px 8px !important; */
+    // border: 1px solid red !important;
+    color: $blue !important;
+    padding-left: 16px !important;
+    height: 47px !important;
+    font-family: 'Questrial' !important;
+}
+
+.css-1dimb5e-singleValue{
+    color: $blue !important;
+    font-family: 'Questrial', sans-serif !important;
+}
+.default-select__control {
+    color: #818DA9;
+    border: 1px solid #E5E5E5 !important;
+    font-family: 'Questrial', sans-serif !important;
+}
+.default-select__option{
+    font-size: 14px !important;
+    font-family: 'Questrial', sans-serif !important;
+}
+.default-select__option:hover, .default-select__option:focus{
+    background-color: #bbf7d0 !important;
+}
+.default-select__option--is-selected{
+    background-color: $green !important;
+}
+.css-1n7v3ny-option {
+    background-color: #bbf7d0 !important;
+    color: var(--custom-black) !important;
+}
+.default-select__control--is-focused {
+  border: 1px solid $green !important;
+  border-color: $green !important;
+  outline: none !important;
+  box-shadow: 0px 0px 0px 0px $green !important;
+}
