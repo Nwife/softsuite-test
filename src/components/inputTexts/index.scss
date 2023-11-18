@@ -1,0 +1,25 @@
+.top-bar__input{
+    width: 354px;
+    // padding: 19px 0 19px 23px;
+    padding-left: 23px;
+    border-radius: 5px;
+    border: 1px solid #DFDFDF;
+}
+.top-bar__input input {
+    flex: 1;
+    color: #57678C;
+    background-color: transparent;
+    border: transparent;
+    outline: 0;
+    padding: 0;
+    outline: 0;
+    border: transparent;
+}
+.top-bar__input button{
+    background-color: #4BAA79;
+    border: none;
+    outline: none;
+    // padding: 14px 15px 14px 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

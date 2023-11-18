@@ -1,11 +1,13 @@
 //icons
 import home from "../../assets/icons/home.svg";
-import search from "../../assets/icons/search.svg";
 import notification from "../../assets/icons/notification.svg";
 import caretDown from "../../assets/icons/caret-down.svg";
 
 //images
 import profile from "../../assets/images/profile.png";
+
+//components
+import Inputsearch from "../inputTexts/InputSearch";
 
 const Topnav = () => {
   return (
@@ -19,13 +21,7 @@ const Topnav = () => {
             <div className="sidebar__item-1-caret"><img src={caretDown} alt="" /></div>
         </div>
 
-        <div className="flex items-center top-bar__input">
-            <input
-                type="text"
-                placeholder="Searh for anything..."
-            />
-            <button className="bg-green rounded-[5px] py-3.5 px-5"><img src={search} alt="" /></button>
-        </div>
+        <Inputsearch placeholder="Searh for anything..." style={{ padding: "14px 15px 14px 15px" }} />
 
         <div className="top-bar__profile flex items-center">
             <div className="notification"><img src={notification} alt="" /></div>
