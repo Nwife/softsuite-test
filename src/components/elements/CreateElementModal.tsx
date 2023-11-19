@@ -8,18 +8,22 @@ import ElementsDetails from "./ElementsDetails";
 import AdditionalDetails from "./AdditionalDetails";
 import Button from "../butttons/Button";
 
+interface CreateElementProps {
+  closeCreateModal: () => void
+}
 
-const CreateElementModal = () => {
+const CreateElementModal = ({ closeCreateModal }: CreateElementProps) => {
   const {
     handleSubmit,
     control,
     formState: { errors },
   } = useForm();
 
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(2);
 
   const onDetailsSubmit = (data: any) => {
     console.log(">>>", data)
+    setStep(2)
   }
 
 
@@ -36,13 +40,27 @@ const CreateElementModal = () => {
               errors={errors}
             /> 
           }
-          { step === 2 && <AdditionalDetails /> }
+          { step === 2 && 
+          <AdditionalDetails 
+            control={control}
+            errors={errors} /> }
         </div>
         
         {/* buttons  */}
         <div className="createelement-modal__buttons flex">
-          <Button title='Cancel' iconRight={true} type="button" style={{ padding: "16px", width: "100%", backgroundColor: "#FFF", border: "2px solid #4BAA79", color: "#4BAA79" }} onClick={() => {}} />
-          <Button title='Next' iconRight={true} style={{ padding: "16px", width: "100%" }} onClick={() => {}} />
+          <Button 
+            title={step === 1 ? 'Cancel' : 'Back'} 
+            type="button" 
+            style={{ padding: "16px", width: "100%", backgroundColor: "#FFF", border: "2px solid #4BAA79", color: "#4BAA79" }} 
+            onClick={() => {
+              step === 1 ? closeCreateModal() : setStep(1)
+            }} 
+          />
+          <Button 
+            title={step === 1 ? 'Next' : 'Create New Element'}
+            style={{ padding: "16px", width: "100%" }} 
+            onClick={() => {}} 
+          />
         </div>
       </form>
     </div>

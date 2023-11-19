@@ -19,6 +19,10 @@ import NoElements from '../../components/elements/NoElements';
 const Elements = () => {
   const [showCreateModal, setShowCreateModal] = useState(false);
 
+  const closeCreateModal = () => {
+    setShowCreateModal(false);
+  }
+
   return (
     <Layout>
       <div className="elements">
@@ -36,7 +40,7 @@ const Elements = () => {
           <NoElements />
         </div>
       </div>
-      {showCreateModal && <CreateElementModal />}
+      {showCreateModal && <CreateElementModal closeCreateModal={closeCreateModal} />}
     </Layout>
   )
 }

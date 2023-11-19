@@ -37,6 +37,7 @@ interface Props {
   name: string;
   id: string;
   label: string;
+  isMulti?: boolean;
   isRequired: boolean;
   isDisabled: boolean;
   placeholder: string;
@@ -53,6 +54,7 @@ const CustomSelect: FC<Props> = ({
   name,
   id,
   label,
+  isMulti = false,
   isRequired,
   isDisabled,
   placeholder,
@@ -84,6 +86,7 @@ const CustomSelect: FC<Props> = ({
                 onChange(val);
                 if (customOnChange) customOnChange(val);
               }}
+              isMulti={isMulti}
               // styles={colorStyles}
               isSearchable={searchable}
               components={{ DropdownIndicator, IndicatorSeparator }}
