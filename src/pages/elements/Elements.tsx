@@ -1,9 +1,17 @@
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setIsLoading, setElements, setError } from "../../redux/reducers/elementReducer";
+
 //components
 import Layout from '../../components/layout/Layout';
 import Button from '../../components/butttons/Button';
 import InputSearch from '../../components/inputTexts/InputSearch';
 
 import { useState } from 'react';
+
+import { FetchElements } from '../../api/requests';
+import { GetElements } from '../../redux/reducers/elementReducer';
+import elementServices from '../../api/services/element';
 
 //icons 
 import cross from "../../assets/icons/cross.svg";
@@ -15,9 +23,25 @@ import './index.scss';
 //components
 import CreateElementModal from '../../components/elements/CreateElementModal';
 import NoElements from '../../components/elements/NoElements';
+import { selectContent, selectError, selectIsLoading, selectTotal } from '../../redux/reducers/elementReducer';
 
 const Elements = () => {
   const [showCreateModal, setShowCreateModal] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const loading = useSelector(selectIsLoading);
+  const total = useSelector(selectTotal);
+  const content = useSelector(selectContent);
+  const error = useSelector(selectError);
+
+  useEffect(() => {
+    //@ts-expect-error undefined
+    dispatch(GetElements())
+  }, [])
+
+  console.log('total>>>', total);
+  console.log('content>>>', content)
 
   const closeCreateModal = () => {
     setShowCreateModal(false);

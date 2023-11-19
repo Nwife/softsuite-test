@@ -21,7 +21,7 @@ const Topnav = () => {
             <div className="sidebar__item-1-caret"><img src={caretDown} alt="" /></div>
         </div>
 
-        <Inputsearch placeholder="Searh for anything..." style={{ padding: "14px 15px 14px 15px" }} />
+        <Inputsearch placeholder="Search for anything..." style={{ padding: "14px 15px 14px 15px" }} />
 
         <div className="top-bar__profile flex items-center">
             <div className="notification"><img src={notification} alt="" /></div>
