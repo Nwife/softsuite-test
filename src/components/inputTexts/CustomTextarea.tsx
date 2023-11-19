@@ -25,7 +25,6 @@ const CustomTextarea: FC<Props> = ({
   isRequired,
   isDisabled = false,
   placeholder,
-  icon,
   errors,
   defaultValue,
   style,

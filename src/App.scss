@@ -1,11 +1,15 @@
 $blue: #2D416F;
 $green: #4BAA79;
+$red: #E05453;
 
 .mr-4{
     margin-right: 16px;
 }
 .flex{
     display: flex;
+}
+.flex-1{
+    flex: 1;
 }
 .flex-col{
     flex-direction: column;
@@ -15,4 +19,16 @@ $green: #4BAA79;
 }
 .justify-between{
     justify-content: space-between;
+}
+.text-center{
+    text-align: center;
+}
+.error-text{
+    margin-top: 4xpx;
+    font-size: 12px;
+    color: $red;
+    font-weight: 600;
+    padding: 6px 8px;
+    border-radius: 4px;
+    background-color: #FDF6F6;
 }

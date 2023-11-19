@@ -19,7 +19,7 @@
         padding: 24px 40px;
         border-radius: 8px;
         background-color: white;
-        height: 760px; 
+        height: auto; 
         max-height: calc(100vh - 50px);
 
         h2{
@@ -33,7 +33,6 @@
         }
     }
 }
-
 .element-details__content-one{
     display: grid;
     gap: 24px;
@@ -41,4 +40,9 @@
 }
 .element-details__content-two{
     margin-top: 24px;
+    gap: 24px;
+}
+.createelement-modal__buttons{
+    gap: 24px;
+    
 }

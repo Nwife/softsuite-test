@@ -10,6 +10,7 @@ interface Props {
   disabled?: boolean;
   icon?: string;
   iconRight?: boolean;
+  type?: "submit" | "button" | "reset" | undefined;
 }
 
 const Spinner = () => <div className="spinner"></div>;
@@ -23,22 +24,23 @@ const Button: FC<Props> = (props): JSX.Element => {
     disabled = false,
     icon,
     iconRight = false,
+    type = "submit" 
 
   } = props;
   return (
-    <div>
+
       <button
         className={`btn ${(loading || disabled) && "opacity-50" }`}
-        type="submit"
+        type={type}
         style={{ ...style }}
         onClick={onClick}
         disabled={loading || disabled}
       >
         <div
-          className={`flex items-center justify-center px-4`}
+          className={` ${icon ? "flex items-center justify-center" : "flex-1 text-center"}`}
         >
           {loading && <Spinner />}
-          {icon ? (
+          {icon && (
             <img
               src={icon}
               alt="icon"
@@ -47,13 +49,11 @@ const Button: FC<Props> = (props): JSX.Element => {
                 ? { "marginRight": "8px", "order": "1", "marginLeft": "8px" } 
                 : { "marginRight" : "8px"} }
             />
-          ) : (
-            <></>
           )}
           {title}
         </div>
       </button>
-    </div>
+
   );
 };
 

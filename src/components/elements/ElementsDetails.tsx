@@ -1,19 +1,19 @@
 import React from "react";
+import { Control, FieldValues, FieldErrors } from "react-hook-form";
 
-//libraries
-import { useForm } from "react-hook-form";
+
 
 //components
 import CustomInput from "../inputTexts/CustomInput";
 import CustomSelect from "../selectInputs/CustomSelect";
 import CustomTextarea from "../inputTexts/CustomTextarea";
 
-const ElementsDetails = () => {
-  const {
-    handleSubmit,
-    control,
-    formState: { errors },
-  } = useForm();
+interface DetailsProps {
+  control: Control<FieldValues>;
+  errors: FieldErrors<FieldValues>
+}
+
+const ElementsDetails = ({ control, errors }: DetailsProps) => {
 
   return (
     <div className="element-details">
@@ -82,7 +82,7 @@ const ElementsDetails = () => {
           defaultValue={""}
         />
       </div>
-      <div className="element-details__content-two">
+      <div className="element-details__content-two flex flex-col">
         <CustomTextarea
           control={control}
           name={"description"}
