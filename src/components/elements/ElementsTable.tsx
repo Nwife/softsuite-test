@@ -129,9 +129,7 @@ const ElementsTable = ({ total, data }: TableProps) => {
         <>
             <div
               className="flex justify-center cursor-pointer"
-              // onClick={() =>
-              //   // setEscalationInfo(my_escalations.filter((item) => item._id === row._id))
-              // }
+              onClick={() => {}} //create an object state that stores the state based on the id
             >
                 <Dropdown menu={{ items: items, onClick}} trigger={["click"]}>
                   <img src={more} alt="" />
