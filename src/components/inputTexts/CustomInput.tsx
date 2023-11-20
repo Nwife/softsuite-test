@@ -86,12 +86,12 @@ const CustomInput: FC<Props> = ({
           }}
         />
 
-        {/* @ts-expect-error not defined */}
+       
         {errors[name] && (
           <div className="error-text">
-            {/* @ts-expect-error not defined */}
+
             {errors[name]["message"] ? (
-              //@ts-expect-error not defined
+ 
               <p>{errors[name]["message"]}</p>
             ) : (
               <p>{label ? label : name} is required.</p>

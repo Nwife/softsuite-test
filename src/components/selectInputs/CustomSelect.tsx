@@ -28,7 +28,7 @@ const DropdownIndicator = (props) => {
   );
 };
 
-//@ts-expect-error library typed
+
 const IndicatorSeparator = ({ innerProps }: IndicatorSeparatorProps) => {
   return null;
 };
@@ -102,7 +102,7 @@ const CustomSelect: FC<Props> = ({
           )}
         />
       </div>
-      {/* @ts-expect-error not defined */}
+
       {errors[name] && (
         <div className="mt-2 error-text">
           <p>{label ? label : name} is required.</p>

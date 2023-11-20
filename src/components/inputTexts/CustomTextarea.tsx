@@ -63,12 +63,12 @@ const CustomTextarea: FC<Props> = ({
             </>
           )}
         />
-        {/* @ts-expect-error undefine */}
+
         {errors[name] && (
           <div className="mt-2 error-text">
-            {/* @ts-expect-error undefine */}
+
             {errors[name]["message"] ? (
-              //  @ts-expect-error undefine
+
               <p>{errors[name]["message"]}</p>
             ) : (
               <p>{label ? label : name} is required.</p>

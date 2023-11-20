@@ -7,7 +7,7 @@ import Layout from '../../components/layout/Layout';
 import Button from '../../components/butttons/Button';
 import InputSearch from '../../components/inputTexts/InputSearch';
 
-import { selectContent, selectError, selectIsLoading, selectTotal } from '../../redux/reducers/elementReducer';
+import { selectContent, selectIsLoading, selectTotal } from '../../redux/reducers/elementReducer';
 
 import { GetElements } from '../../redux/reducers/elementReducer';
 
