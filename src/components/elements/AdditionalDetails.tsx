@@ -49,7 +49,7 @@ const AdditionalDetails = ({ control, errors }: DetailsProps) => {
               errors={errors}
               isDisabled={false}
               defaultValue={""}
-              min={""}
+              min={getCurrentTimestamp(1)}
               max={""}
               icon={""}
             />
@@ -87,8 +87,8 @@ const AdditionalDetails = ({ control, errors }: DetailsProps) => {
         <div className="additional-detail__content-two">
           <CustomSelect
             control={control}
-            name={`payrun`}
-            id={`payrun`}
+            name={`month`}
+            id={`month`}
             label={"Selected Pay Months"}
             placeholder={`Select`}
             isRequired={true}
@@ -96,9 +96,8 @@ const AdditionalDetails = ({ control, errors }: DetailsProps) => {
             isDisabled={false}
             isMulti={true}
             options={[
-                { label: "20 FT", value: "20FT" },
-                { label: "40 FT", value: "40FT" },
-                { label: "40 HC FT", value: "40HC FT" },
+              { label: "Option 1", value: "Option 1" },
+              { label: "Option 2", value: "Option 2" },
             ]}
             defaultValue={""}
           />

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { Table, Dropdown, MenuProps, message } from "antd";
 
 //styles
@@ -8,17 +10,26 @@ import more from "../../assets/icons/more.svg";
 import eye from "../../assets/icons/eye.svg";
 import edit from "../../assets/icons/edit.svg";
 import trash from "../../assets/icons/delete.svg";
+import bigTrash from "../../assets/icons/bigtrash.svg";
 
 //libraries
 import moment from 'moment';
 
 //components
+import ElementactionModal from "./ElementActionModal";
+
 interface TableProps {
   total: number;
   data: any;
 }
 
 const ElementsTable = ({ total, data }: TableProps) => {
+
+  const [showActionModal, setShowActionModal] = useState(true);
+
+  const closeActionModal = () => {
+    setShowActionModal(false)
+  }
 
   const items = [
     { 
@@ -50,9 +61,11 @@ const ElementsTable = ({ total, data }: TableProps) => {
   const onClick: MenuProps["onClick"] = ({ key }) => {
     // console.log("key>>>", key)
     if (key === "1") {
-      // setShowResolveModal(true);
+      // navigate to element links page
     } else if (key === "2") {
-      // navigate(`/escalations/${escalationInfo?.[0]._id}`)
+      // render create form
+    } else if (key === "3"){
+      setShowActionModal(true)
     }
   };
 
@@ -133,25 +146,19 @@ const ElementsTable = ({ total, data }: TableProps) => {
   return (
     <div>
         <Table
+          //@ts-expect-error undefined
           columns={columns}
           dataSource={data}
-          // pagination={{
-          //   defaultPageSize: 10,
-          //   total: total,
-          //   showTotal: (total, range) =>
-          //     `${range[0]}-${range[1]} of ${total} items`,
-          //   // current: page + 1,
-          //   showSizeChanger: true,
-          //   pageSizeOptions: ["10", "15", "20", "30"],
-          //   // onChange: (page, pageSize) => {
-          //   //   handlePageChange(page - 1);
-          //   //   handlePerRowsChange(pageSize, page - 1);
-          //   //   // console.log("page", page - 1);
-          //   //   // console.log("pageSize", pageSize);
-          //   // },
-          // }}
           scroll={{ x: 1000 }}
         />
+        {showActionModal && 
+          <ElementactionModal 
+            icon={bigTrash}
+            text="Are you sure you want to delete Element?"
+            subtext="You can’t reverse this action"
+            closeActionModal={closeActionModal}
+          />
+        }
     </div>
   );
 };

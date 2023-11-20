@@ -32,6 +32,34 @@
             margin: 40px 0;
         }
     }
+
+    .createelement-modal__content-action{
+        width: 434px;
+        padding: 40px 40px 33px 40px;
+        border-radius: 8px;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        height: auto; 
+        max-height: calc(100vh - 50px);
+
+        .main-text{
+            color: #57678C;
+            font-size: 24px;
+            margin: 24px 0 13px 0;
+            max-width: 284px;
+            text-align: center;
+            line-height: 28px;
+        }
+        .subtext{
+            color: #57678C;
+            margin: 13px 0 27px 0;
+        }
+        .action-buttons{
+            width: 100%;
+            gap: 16px;
+        }
+    }
 }
 .element-details__content-one, .additional-detail__content-one, .additional-detail__content-three{
     display: grid;
