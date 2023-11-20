@@ -1,10 +1,15 @@
+import { Table, Dropdown, MenuProps, message } from "antd";
+
 //styles
 import './index.scss';
 
 //icons
+import more from "../../assets/icons/more.svg";
+import eye from "../../assets/icons/eye.svg";
+import edit from "../../assets/icons/edit.svg";
+import trash from "../../assets/icons/delete.svg";
 
 //libraries
-import { Table } from "antd";
 import moment from 'moment';
 
 //components
@@ -14,6 +19,42 @@ interface TableProps {
 }
 
 const ElementsTable = ({ total, data }: TableProps) => {
+
+  const items = [
+    { 
+      key: "1", 
+      label: 
+        <div className={`flex items-center element-link element-link-op`}>
+          <img src={eye} alt="" />
+          <p className="black-text-4 font-light">View Element Links</p>
+        </div>
+    },
+    { 
+      key: "2",
+      label: 
+        <div className="flex items-center element-link element-link-op">
+          <img src={edit} alt="" />
+          <p className="black-text-4 font-light">Edit Element</p>
+        </div> 
+    },
+    { 
+      key: "3",
+      label: 
+        <div className="flex items-center element-link element-link-delete">
+          <img src={trash} alt="" />
+          <p className="black-text-4 font-light">Delete Element</p>
+        </div> 
+    },
+  ];
+
+  const onClick: MenuProps["onClick"] = ({ key }) => {
+    // console.log("key>>>", key)
+    if (key === "1") {
+      // setShowResolveModal(true);
+    } else if (key === "2") {
+      // navigate(`/escalations/${escalationInfo?.[0]._id}`)
+    }
+  };
 
   const columns = [
     {
@@ -65,6 +106,27 @@ const ElementsTable = ({ total, data }: TableProps) => {
           {modifiedBy ? modifiedBy : "N/A"}
         </span>
       ),
+    },
+    {
+      title: "Action",
+      dataIndex: "operation",
+      key: "operation",
+      render: (_, row, { status }) => {
+        return (
+        <>
+            <div
+              className="flex justify-center cursor-pointer"
+              // onClick={() =>
+              //   // setEscalationInfo(my_escalations.filter((item) => item._id === row._id))
+              // }
+            >
+                <Dropdown menu={{ items: items, onClick}} trigger={["click"]}>
+                  <img src={more} alt="" />
+                </Dropdown> 
+            </div>
+        </>
+        )
+      }
     },
   ];
 

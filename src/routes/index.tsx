@@ -1,14 +1,13 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 //components
-import Dashboard from "../pages/dashboard/Dashboard";
 import Elements from "../pages/elements/Elements"
 
 const Router = () => {
   return (
     <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/element-setup/element" element={<Elements />} />
+        <Route path="/" element={<Navigate to="elements" replace />} />
+        <Route path="/elements" element={<Elements />} />
     </Routes>
   )
 }

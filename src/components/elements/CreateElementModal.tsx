@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import ElementsDetails from "./ElementsDetails";
 import AdditionalDetails from "./AdditionalDetails";
 import Button from "../butttons/Button";
+import StepsComponent from "../steps/StepsComponent";
 
 interface CreateElementProps {
   closeCreateModal: () => void
@@ -19,10 +20,9 @@ const CreateElementModal = ({ closeCreateModal }: CreateElementProps) => {
     formState: { errors },
   } = useForm();
 
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(1);
 
   const onDetailsSubmit = (data: any) => {
-    console.log(">>>", data)
     setStep(2)
   }
 
@@ -32,7 +32,8 @@ const CreateElementModal = ({ closeCreateModal }: CreateElementProps) => {
       <form onSubmit={handleSubmit(onDetailsSubmit)} className="createelement-modal__content flex flex-col">
         <h2>Create Element</h2>
         {/* Progress bar */}
-        <div className="createelement-modal__content-progress">{step}</div>
+        <StepsComponent steps={[1, 2]} step={step} />
+        {/* <div className="createelement-modal__content-progress">{step}</div> */}
         <div className="createelement-modal__content-step">
           { step === 1 && 
             <ElementsDetails 

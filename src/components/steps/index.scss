@@ -1,0 +1,40 @@
+.steps__components {
+    // border: 1px solid green;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .step__comp {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .step__line {
+    height: 3px;
+    width: 100%;
+  
+    background-color: #cdcdcd;
+  }
+  
+  .active {
+    background-color: #4baa79;
+  }
+  
+  .step__circle {
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 1px solid #4baa79;
+    color: #4baa79;
+  }
+  
+  .circle__active {
+    background-color: #4baa79;
+    color: white;
+  }
+  

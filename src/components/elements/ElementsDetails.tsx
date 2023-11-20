@@ -43,9 +43,8 @@ const ElementsDetails = ({ control, errors }: DetailsProps) => {
           errors={errors}
           isDisabled={false}
           options={[
-              { label: "20 FT", value: "20FT" },
-              { label: "40 FT", value: "40FT" },
-              { label: "40 HC FT", value: "40HC FT" },
+              { label: "Option 1", value: "Option 1" },
+              { label: "Option 2", value: "Option 2" },
           ]}
           defaultValue={""}
         />
@@ -59,9 +58,8 @@ const ElementsDetails = ({ control, errors }: DetailsProps) => {
           errors={errors}
           isDisabled={false}
           options={[
-              { label: "20 FT", value: "20FT" },
-              { label: "40 FT", value: "40FT" },
-              { label: "40 HC FT", value: "40HC FT" },
+            { label: "Option 1", value: "Option 1" },
+            { label: "Option 2", value: "Option 2" },
           ]}
           defaultValue={""}
         />
@@ -75,9 +73,8 @@ const ElementsDetails = ({ control, errors }: DetailsProps) => {
           errors={errors}
           isDisabled={false}
           options={[
-              { label: "20 FT", value: "20FT" },
-              { label: "40 FT", value: "40FT" },
-              { label: "40 HC FT", value: "40HC FT" },
+            { label: "Option 1", value: "Option 1" },
+            { label: "Option 2", value: "Option 2" },
           ]}
           defaultValue={""}
         />

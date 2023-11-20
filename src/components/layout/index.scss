@@ -1,14 +1,14 @@
 @import "../../App.scss";
 
 .layout{
-    height: 100%;
+    height: 100vh;
 
     .layout-content{
         // background-color: cadetblue;
         background-color: #F6F7F9;
         width: 100%;
         overflow: hidden;
-        height: 100%;
+        height: 100vh;
     }
     .layout-content__display{
         padding-left: 48px;

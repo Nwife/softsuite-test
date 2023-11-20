@@ -41,6 +41,17 @@
 .elements-table{
     margin-top: 24px;
 }
+.element-link{
+    gap: 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.element-link-op{
+    color: $blue;
+}
+.element-link-delete{
+    color: $red;
+}
 .additional-detail__content-two{
     margin: 24px 0;
 }
