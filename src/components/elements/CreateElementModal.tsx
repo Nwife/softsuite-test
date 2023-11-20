@@ -22,7 +22,9 @@ const CreateElementModal = ({ closeCreateModal }: CreateElementProps) => {
 
   const [step, setStep] = useState(1);
 
-  const onDetailsSubmit = (data: any) => {
+  
+  const onDetailsSubmit = (data: object) => {
+    console.log(data)
     setStep(2)
   }
 

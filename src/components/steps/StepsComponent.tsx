@@ -21,7 +21,7 @@ const StepsComponent = (props: any) => {
 
       {steps.length > 1 &&
         steps.map(
-          (curr_step: any, index: any) =>
+          (curr_step: number, index: number) =>
             index > 0 &&
             (index + 1 <= step ? (
               <div key={index} className="step__comp">

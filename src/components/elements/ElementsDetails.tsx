@@ -1,7 +1,5 @@
-import React from "react";
+
 import { Control, FieldValues, FieldErrors } from "react-hook-form";
-
-
 
 //components
 import CustomInput from "../inputTexts/CustomInput";

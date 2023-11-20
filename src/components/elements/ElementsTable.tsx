@@ -25,7 +25,7 @@ interface TableProps {
 
 const ElementsTable = ({ total, data }: TableProps) => {
 
-  const [showActionModal, setShowActionModal] = useState(true);
+  const [showActionModal, setShowActionModal] = useState(false);
 
   const closeActionModal = () => {
     setShowActionModal(false)

@@ -28,6 +28,7 @@ const DropdownIndicator = (props) => {
   );
 };
 
+//@ts-expect-error library typed
 const IndicatorSeparator = ({ innerProps }: IndicatorSeparatorProps) => {
   return null;
 };
@@ -42,7 +43,7 @@ interface Props {
   isDisabled: boolean;
   placeholder: string;
   errors: object;
-  defaultValue: any;
+  defaultValue: any; 
   options: any;
   searchable?: boolean;
   customOnChange?: (e: any) => void;

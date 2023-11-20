@@ -32,7 +32,7 @@ const Elements = () => {
   const loading = useSelector(selectIsLoading);
   const total = useSelector(selectTotal);
   const content = useSelector(selectContent);
-  const error = useSelector(selectError);
+  // const error = useSelector(selectError);
 
   useEffect(() => {
     //@ts-expect-error undefined
@@ -45,8 +45,6 @@ const Elements = () => {
   const closeCreateModal = () => {
     setShowCreateModal(false);
   }
-
-  const Spinner = () => <div className="spinner mr-2"></div>;
 
   return (
     <Layout>
