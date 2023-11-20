@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setIsLoading, setElements, setError } from "../../redux/reducers/elementReducer";
 
@@ -7,11 +7,9 @@ import Layout from '../../components/layout/Layout';
 import Button from '../../components/butttons/Button';
 import InputSearch from '../../components/inputTexts/InputSearch';
 
-import { useState } from 'react';
+import { selectContent, selectError, selectIsLoading, selectTotal } from '../../redux/reducers/elementReducer';
 
-import { FetchElements } from '../../api/requests';
 import { GetElements } from '../../redux/reducers/elementReducer';
-import elementServices from '../../api/services/element';
 
 //icons 
 import cross from "../../assets/icons/cross.svg";
@@ -23,7 +21,8 @@ import './index.scss';
 //components
 import CreateElementModal from '../../components/elements/CreateElementModal';
 import NoElements from '../../components/elements/NoElements';
-import { selectContent, selectError, selectIsLoading, selectTotal } from '../../redux/reducers/elementReducer';
+import ElementsTable from '../../components/elements/ElementsTable';
+
 
 const Elements = () => {
   const [showCreateModal, setShowCreateModal] = useState(false);
@@ -47,8 +46,11 @@ const Elements = () => {
     setShowCreateModal(false);
   }
 
+  const Spinner = () => <div className="spinner mr-2"></div>;
+
   return (
     <Layout>
+      {loading ? <p>Loading...</p> :
       <div className="elements">
         <p className='elements-header'>Elements</p>
 
@@ -59,11 +61,22 @@ const Elements = () => {
           </div>
           <Button title='Create Element' icon={cross} iconRight={true} style={{ padding: "12px" }} onClick={() => setShowCreateModal(true)} />
         </div>
-
+{/* 
         <div className="elements-content">
           <NoElements />
-        </div>
-      </div>
+        </div> */}
+        { content?.length > 0 ?
+          <div className='elements-table'>
+            <ElementsTable
+              data={content} 
+              total={total}
+            />
+          </div> :
+          <div className="elements-content">
+            <NoElements />
+          </div> 
+        }
+      </div>}
       {showCreateModal && <CreateElementModal closeCreateModal={closeCreateModal} />}
     </Layout>
   )

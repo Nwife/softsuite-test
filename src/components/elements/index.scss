@@ -38,6 +38,9 @@
     gap: 24px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+.elements-table{
+    margin-top: 24px;
+}
 .additional-detail__content-two{
     margin: 24px 0;
 }
@@ -117,6 +120,20 @@
     }
     .slider.round:before {
         border-radius: 50%;
+    }
 }
-
+.status{
+    padding: 4px 8px;
+    width: 70px;
+    border-radius: 40px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.active-status{
+    color: #4BAA79;
+    background-color: #F4FAF7;
+}
+.inactive-status{
+    color: #E05453;
+    background: #e054530d;
 }
